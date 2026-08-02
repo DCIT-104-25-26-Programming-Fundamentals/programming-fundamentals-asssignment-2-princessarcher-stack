@@ -71,6 +71,7 @@
 #include <iostream>
 #include <iomanip>
 #include <cmath>
+#include <stdexcept>
 using namespace std;
 
 double add(double a, double b) {
@@ -88,7 +89,7 @@ double divide(double a, double b) {
     }
     return a / b;
 }
-double modulus(int a, int b) {
+double modulo_operation(int a, int b) {
     if (b == 0) {
         throw runtime_error("Error: Cannot perform modulus by zero.");
     }

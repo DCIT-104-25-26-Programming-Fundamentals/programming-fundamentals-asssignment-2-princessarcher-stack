@@ -44,12 +44,14 @@
 // =============================================================================
 
 #include <iostream>
+
 #include <string>
 
+using namespace std;
 string get_grade(double score) {
 
     if (score < 0 || score > 100) {
-        return ""; // Return null character for invalid score
+        return ""; // Return empty string for invalid score
     } else if (score >= 80) {
         return "A";
     } else if (score >= 70) {
@@ -69,9 +71,9 @@ int main() {
     cout << "Enter student score (0-100): ";
     cin >> score;
 
-    std::string grade = get_grade(score);
+    string grade = get_grade(score);
 
-    if (grade == "\0") {
+    if (grade == "") {
         cout << "Error: Score must be between 0 and 100." << endl;
     } else {
         cout << "Grade: " << grade << endl;
